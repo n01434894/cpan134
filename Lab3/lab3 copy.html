@@ -1,38 +1,33 @@
+
 <!DOCTYPE html>
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Demonstration of the use of 5 HTML 5 controls.</title>
+    <title>Demonstration of the use of 5 HTML 5 controls.
+    </title>
   </head>
   <body>
     <header>
       <h1>Demonstration of the use of 5 HTML 5 controls.</h1>
     </header>
-
-
-    <hr>
-
-
     <main>
 
-      <!--  section tags to search content -->
 
-      <section id="search-control">
-        <h2>Here's an example of an HTML5 Search control</h2>
+      <br>
+      <br>
 
-        <form action="/search" method="get"
-          <label for="search">Search:</label>
-          <input type="text" id="search" name="q" placeholder="Search..." required>
-          <button type="submit">Go</button>
-        </form>
+      <h2> Here's an example of an HTML5 Search control </h2>
 
-      </section>
+      <form action="/search" method="get">
+        <label for="search">Search:</label>
+        <input type="text" id="search" name="q" placeholder="Search...">
+        <button type="submit">Go</button>
+      </form>
       
       <br>
       <br>
-  <!--  section tags to form content -->
 
-      <section id="form-control">
+
 
       <h2>Here's an example of an HTML5 form controls </h2>
 
@@ -41,37 +36,39 @@
             <input type="hidden" name="hidden_field_name" value="hidden_field_value">
             
 <br>      
-    <h3>Select Control</h3>
+<br>
+    <h2>Select Control</h2>
 
-    <label for="fruits-select">Select a fruit:</label>
-    <select name="fruits" id="fruits-select" size="1">
-      <option value="mango">Mango</option>
-      <option value="banana">Banana</option>
-      <option value="grapes">Grapes</option>
-      <option value="orange">Orange</option>
-    </select>
-    
+      <div id="color-help" class="color-help"><strong> Select a fruits from the list Below</strong></div>
+<br> 
+      <label for="fruits-select">Choose a fruits:</label> <small id="fruits-select-help" class="form-text text-muted">(You can use se arrow keys to navigate options)</small>
+        <select name="fruits" id="fruits-select" aria-describedby="fruits-select-help" size="1"> 
+          <option value="mango">Mango</option>
+          <option value="banana">Banana</option>
+          <option value="grapes">grapes</option>
+          <option value="orange">Orange</option>
+        </select>
 
 <br>
 <br>
 
-   <h3>Datalist Control</h3>
+   <h2>Datalist Control</h2>
 
-   <label for="color">Select a color:</label>
-<input type="text" id="color" list="colors" name="color" placeholder="Select color">
-<datalist id="colors">
-  <option value="Red"></option>
-  <option value="Orange"></option>
-  <option value="Yellow"></option>
-  <option value="Green"></option>
-  <option value="Blue"></option>
-</datalist>
+        <label for="color">Select a color:</label>
+        <input type="text" id="color" list="colors" name="color" placeholder="Select color">
+        <datalist id="colors">
+          <option value="Red">
+          <option value="Orange">
+          <option value="Yellow">
+          <option value="Green">
+          <option value="Blue">
+        </datalist>
 
 
 <br>
 <br>
 
-    <h3>Email control</h3>
+    <h2>Email control</h2>
     
        <label for="email">Email:
        <input type="email" name="email" id="email" size="30" maxlength="255" value="" placeholder="Enter email address" required>
@@ -81,7 +78,7 @@
 <br>
 <br>
 
-    <h3>URL text box</h3>
+    <h2>URL text box</h2>
 
       <label for="myUrl">Enter a URL:</label>
       <input type="url" name="myUrl" id="myUrl" size="30" maxlength="255" placeholder="https://example.com" required>
@@ -89,7 +86,7 @@
 <br>
 <br>
   
-<h3>Telephone number control</h3> 
+<h2>Telephone number control</h2> 
 
 <label for="phone">Phone number:</label>
 <input type="tel" id="phone" name="phone" size="10" maxlength="12" value="" placeholder="Enter phone number" required>
@@ -98,7 +95,7 @@
 <br>
 <br>
 
-<h3> Basic slider control </h3>
+<h2> Basic slider control </h2>
 
 <label for="slider">Choose a value:</label>
 <input type="range" id="slider" name="slider" min="0" max="100" value="50">
@@ -107,7 +104,7 @@
 <br>
 
 
-<h3>Spinner control</h3>
+<h2>Spinner control</h2>>
 
 <label for="myChoice">Choose a number between 1 and 100:</label>
 <input type="number" name="myChoice" id="myChoice" min="1" max="100" placeholder="0">
@@ -115,13 +112,13 @@
 <br>
 <br>
 
-<h3>Color well control </h3>
+<h2>Color well control </h2>
 
   <label for="myColor">Choose a color:</label>
   <input type="color" name="myColor" id="myColor">
 
 
- <h3> Submit and Reset control </h3>
+ <h2> Submit and Reset control </h2>
   
  <button>
   <input type="submit" id="submit" name="submit" value="Submit">
@@ -131,12 +128,10 @@
   <br>
           </form>
           
-        </section>
+
           
        
          
     </main>
-
-    <footer> HTML5 Demonstration End </p></footer>
   </body>
 </html>
