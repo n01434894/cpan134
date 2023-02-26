@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>About Us</title>
+	<title>Contact Us</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="css/about.css">
+	<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body id="body" class="body">
@@ -21,12 +21,12 @@
 			<a href="index.html">Home</a>
 				<a href="services.html">Service</a>
 				<a  href="portfolio.html">Portfolio</a>
-				<a class="active" href="about.html">About Us</a>
-				<a href="contact.html">Contact Us</a>
+				<a  href="about.html">About Us</a>
+				<a class="active" href="contact.html">Contact Us</a>
 	
 				<div class="search-container">
-					<form action="/action_page.php">
-					  <input type="text" placeholder="Search.." name="search">
+					<form method="get" action="http://www.google.com/search">
+					  <input id="q" name="q" type="text" placeholder="Search.." name="search">
 					  <button type="submit"><i class="fa fa-search"></i></button>
 					</form>
 				  </div>
@@ -39,47 +39,110 @@
 </body>
 
 	<main>
-		<section id="about-intro">
+		<section id="contact-intro">
 	
-<div id="about-intro" class="about-intro">
+<div id="contact-intro" class="contact-intro">
 	
-	<table>
 
-		<tr>
+
+<table>
+
+	<tr>
 		
 				
-			<h1>About Us!</h1>
-		
-			<hr>
-		
-			<img src="images/about-us.jpg" alt="our services" width="100%" height="300" id="services-intro-img" class="services-intro-img">
-		
-		
-		</tr>
-		
-		<tr>
-			
-		
-		<p>
+		<h1>Contact Us!</h1>
+	
+		<hr>
+	
+		<img src="images/contact-us.jpg" alt="contact us" width="100%" height="300" id="contact-intro-img" class="contact-intro-img">
+	
+	
+	</tr>
+	<br><br>
+	<tr>
+	  <td><label for="first-name">First Name:</label> </td>
+	  <td><input type="text" id="first-name" name="first-name" required><br><br></td>
+	</tr>
+	<tr>
+	  <td><label for="last-name">Last Name:</label></td>
+	  <td><input type="text" id="last-name" name="last-name" required><br><br></td>
+	</tr>
+	<tr>
+	  <td><label for="company-name">Company Name:</label></td>
+	  <td><input type="text" id="company-name" name="company-name"><br><br>
+	  </td>
+	</tr>
+	<tr>
+	  <td><label for="email">Email:</label></td>
+	  <td><input type="email" name="email" id="email" size="30" maxlength="255" value="" placeholder="Enter email address" required>
+		<br><br></td>
+	</tr>
+	<tr>
+	  <td><label for="mobile-number">Mobile Number:</label></td>
+	  <td><input type="tel" id="phone" name="phone" size="10" maxlength="12" value="" placeholder="Enter phone number" required>
+		<br><br></td>
+	</tr>
+	<tr>
+	  <td><label for="myUrl">Website a URL:</label></td>
+	  <td><input type="url" name="myUrl" id="myUrl" size="30" maxlength="255" placeholder="https://example.com" required>
+		  <br><br></td>
+	</tr>
+	<tr>
+	  <td><label for="service">Select a Service:</label></td>
+	  <td>	<input type="text" id="service" list="services" name="service" placeholder="Select a service">
+		<datalist id="services">
+			<option value="Website Design">Website Design</option>
+			<option value="Logo Design">Logo Design</option>
+			<option value="Digital Art Creation">Digital Art Creation</option>
+			<option value="Website Administration">Website Administration</option>
+			<option value="Domain Services">Domain Services</option>
+			<option value="Hosting Services">Hosting Services</option>
+			<option value="Website Maintenance">Website Maintenance</option>
+			<option value="Others Services">Others Services</option>
+		</datalist>
+		<br><br></td>
+	</tr>
 
-			OCOLS Inc. is a digital art and design firm that is dedicated to helping businesses and individuals establish and enhance their online presence. The company has built a reputation for delivering high-quality design solutions that are tailored to meet the unique needs and preferences of each client. Their primary services include website design, logo design, digital art creation, website administration, domain services, hosting, and maintenance.
+	<tr>
+		<td> <label for="client-select">Are you existing client? :</label></td>
+		<td>    <select name="client-select" id="client-select" size="1">
+			<option value="Yes">Yes</option>
+			<option value="No">No</option>
+		  </select>
+		  <br><br></td>
+	  </tr>
 
-			Website design is one of the core services offered by OCOLS Inc. They design websites from scratch and ensure that the end product is fully responsive and optimized for all devices. The firm recognizes the importance of designing websites that align with a client's brand identity and goals, and as such, they take the time to understand the needs of each client before embarking on any project. Whether a client is looking to create a simple portfolio site or a complex e-commerce platform, the OCOLS Inc. team has the expertise and experience needed to deliver exceptional results.
-			
-			In addition to website design, OCOLS Inc. also offers logo design services. The firm understands that a logo is an essential element of any brand, and as such, they work closely with clients to create logos that are unique, memorable, and reflective of their brand identity. The designers at OCOLS Inc. pay attention to every detail, from color scheme to typography, to ensure that the final product is perfect.
-			
-			Another core service offered by OCOLS Inc. is digital art creation. Their team of skilled designers has extensive experience in creating digital artwork that ranges from illustrations to animations. This service is particularly useful for businesses that are looking to enhance their marketing efforts or create visually appealing content for their websites and social media channels.
-			
-			When it comes to website administration, domain services, hosting, and maintenance, OCOLS Inc. has got it covered. They understand that maintaining a website can be a daunting task, and as such, they offer reliable website hosting and maintenance services to ensure that clients' websites are always up and running. Their domain services are also tailored to meet the unique needs of each client, whether it's registering a new domain or transferring an existing one.
-			
-			At OCOLS Inc., exceptional customer service is a top priority. The company's team of experts works closely with clients throughout the entire design and development process to ensure that their needs are met. They are always available to answer any questions and provide support whenever needed.
-			
-			In conclusion, OCOLS Inc. is a digital art and design firm that offers a range of services aimed at helping businesses and individuals establish and enhance their online presence. Their team of skilled designers and developers is dedicated to delivering high-quality design solutions that are tailored to meet the unique needs of each client. With their exceptional customer service and support, OCOLS Inc. has become a trusted partner for businesses and individuals looking to create stunning websites, logos, and digital art.
+	  <tr>
+		<td> <label for="Bestcontact">How you prefer us to contact?</label></td>
+		<td>    
+			<input type ="checkbox" id="checkboxEmail" name="Email" value="Email">
+<label for="checkboxEmail">Email</label>
+<input type ="checkbox" id="checkboxPhone" name="phone" value="Phonet">
+<label for="checkboxPhone">Phone</label>
 
-		</p>
-		
-			</tr>
-		</table>
+
+		  <br><br></td>
+	  </tr>
+
+	<tr>
+	  <td><label for="details">Details:</label></td>
+	  <td><textarea id="details" name="details" rows="8" required></textarea><br>
+		<br><br></td>
+	</tr>
+
+	<tr>
+		<th colspan="2"> <button type="submit">Submit</button> </th>
+	</tr>
+
+</form>
+  </table>
+
+
+
+
+
+
+
 </div>
 
 		
