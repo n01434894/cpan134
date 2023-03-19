@@ -1,3 +1,35 @@
+
+/* Styles for Sections with Id Elements*/
+
+#header {
+	display: block;
+}
+
+
+#page-intro {
+	display: block;
+}
+
+
+
+#product-categories {
+	display: block;
+}
+
+
+
+#guarantee {
+	display: block;
+}
+
+#footer {
+	display: block;
+}
+
+
+
+
+
 /* Styles for wrapper */
 
 .wrapper {
@@ -7,13 +39,6 @@
 	padding-left: 10px;
 
 }
-
-/* Styles for header section */
-
-#header {
-	display: block;
-}
-
 
 
 /* Styles for pumpkin logo */
@@ -93,6 +118,6 @@ a:visited {
 
 /* Styles for footer */
 
-.footer {
+.footer-copyright {
 	float: right;
 }
