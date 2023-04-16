@@ -187,3 +187,24 @@
 
   text-align: right;
 }
+
+
+#about-intro .abouthover {
+  color: #29478d;
+  font-size: 16px;
+  background-color:rgb(242, 245, 254);
+  padding: 10px 10px 10px 10px;
+}
+
+#about-intro .h22 {
+
+  text-shadow: 1px 1px 1px #fff4f4, 2px 2px 1px #e2e2e2;
+  color: #2f45a0;
+  text-align: left;
+  background-color: #eef6ff;
+  border-radius: 0%;
+  padding-left: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  
+}

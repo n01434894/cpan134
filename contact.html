@@ -4,9 +4,17 @@
 <head>
 	<title>Contact Us</title>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
 	<link rel="stylesheet" href="css/contact.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+	<script
+		src="https://cdn.jsdelivr.net/gh/xcash/bootstrap-autocomplete@master/dist/latest/bootstrap-autocomplete.min.js"></script>
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script type="text/javascript" src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
 </head>
 
 <body id="body" class="body">
@@ -57,49 +65,201 @@
 
 			<div id="contact-form" class="contact-form">
 
-				<table>
-					<form action="action_page.php">
+				<div class="container">
 
-						<br><br>
-						<tr>
-							<td><label for="first-name">First Name:</label> </td>
-							<td><input type="text" id="first-name" name="first-name" required><br><br></td>
-						</tr>
-						<tr>
-							<td><label for="last-name">Last Name:</label></td>
-							<td><input type="text" id="last-name" name="last-name" required><br><br></td>
-						</tr>
-						<tr>
-							<td><label for="company-name">Company Name:</label></td>
-							<td><input type="text" id="company-name" name="company-name"><br><br>
-							</td>
-						</tr>
-						<tr>
-							<td><label for="email">Email:</label></td>
-							<td><input type="email" name="email" id="email" size="30" maxlength="255" value=""
-									placeholder="Enter email address" required>
-								<br><br>
-							</td>
-						</tr>
-						<tr>
-							<td><label for="mobile-number">Mobile Number:</label></td>
-							<td><input type="tel" id="phone" name="phone" size="10" maxlength="12" value=""
-									placeholder="Enter phone number" required>
-								<br><br>
-							</td>
-						</tr>
-						<tr>
-							<td><label for="myUrl">Website a URL:</label></td>
-							<td><input type="url" name="myUrl" id="myUrl" size="30" maxlength="255"
-									placeholder="https://example.com" required>
-								<br><br>
-							</td>
-						</tr>
-						<tr>
-							<td><label for="service">Select a Service:</label></td>
-							<td> <input type="text" id="service" list="services" name="service"
-									placeholder="Select a service">
-								<datalist id="services">
+					<div class="container-fluid">
+
+
+						<form class="row g-3 needs-validation" novalidate>
+
+							<div class="col-md-12"></div>
+							<div class="col-md-12"></div>
+
+
+							<div class="col-md-4">
+								<label for="firstname" class="form-label">First name</label>
+								<input type="text" class="form-control" id="firstname" value="" name="fname" required>
+								<div class="valid-feedback">
+									Looks good!
+								</div>
+								<div class="invalid-feedback">
+									First name required
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label for="lastname" class="form-label">Last name</label>
+								<input type="text" class="form-control" id="lastname" value="" name="lname" required>
+								<div class="valid-feedback">
+									Looks good!
+								</div>
+								<div class="invalid-feedback">
+									Last name required
+								</div>
+							</div>
+
+							<div class="col-md-4">
+								<label for="company" class="form-label">Company</label>
+								<input type="text" class="form-control" id="company" value="" name="company" required>
+								<div class="valid-feedback">
+									Looks good!
+								</div>
+								<div class="invalid-feedback">
+									Last name required
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<label for="phone" class="form-label">Phone</label>
+								<input type="tel" pattern="^\d{3,4}-\d{3}-\d{4}$" id="phone" name="phone1"
+									maxlength="14" data-fv-numeric="true"
+									data-fv-numeric-message="Please enter valid phone numbers"
+									data-fv-phone-country11="CA" required="required"
+									data-fv-notempty-message="This field cannot be left blank." placeholder="Phone No. "
+									class="form-control" name="data[User][phone]" data-fv-field="data[User][phone]">
+
+								<div class="valid-feedback">
+									Looks good!
+								</div>
+								<div class="invalid-feedback">
+									Number Invalid. Example: xxx-xxx-xxxx
+								</div>
+
+							</div>
+
+
+							<div class="col-md-3">
+								<label for="fax" class="form-label">Fax</label>
+
+								<input type="tel" pattern="^\d{3,4}-\d{3}-\d{4}$" id="fax" name="fax" maxlength="14"
+									data-fv-numeric="true" data-fv-numeric-message="Please enter valid fax numbers"
+									required="required" data-fv-notempty-message="This field cannot be left blank."
+									placeholder="Fax No. " class="form-control" name="data[User][fax]"
+									data-fv-field="data[User][fax]">
+
+								<div class="valid-feedback">
+									Looks good!
+								</div>
+								<div class="invalid-feedback">
+									Number Invalid. Example: xxx-xxx-xxxx
+								</div>
+
+							</div>
+
+
+
+							<div class="col-md-4">
+								<label for="email" class="form-label">Email</label>
+								<div class="input-group has-validation">
+									<input type="email" id="email" name="email" class="form-control"
+										placeholder="name@example.com" required>
+									<div class="invalid-feedback">
+										Please choose a Email.
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-2">
+
+								<label for="preferred" class="form-label">Preferred Contact</label>
+								<select class="form-select" id="preferred" name="preferred" required>
+									<option selected disabled value="">Choose...</option>
+									<option value="1">Email</option>
+									<option value="2">Phone</option>
+									<option value="2">Fax</option>
+								</select>
+								<div class="invalid-feedback">
+									Selection required.
+								</div>
+								<div class="valid-feedback">
+									Looks good!
+								</div>
+
+							</div>
+
+
+
+
+							<div class="col-md-3">
+								<label for="addess1" class="form-label">Address line 1</label>
+								<input type="text" class="form-control" id="addess1" name="addess1"
+									placeholder="Suite, Unit, Apartment">
+								<div class="valid-feedback">
+									Address optional.
+								</div>
+							</div>
+							<div class="col-md-3">
+								<label for="addess2" class="form-label">Address line 2</label>
+								<input type="text" class="form-control" id="addess2" name="addess2"
+									placeholder="Street Number and Address">
+								<div class="valid-feedback">
+									Address optional.
+								</div>
+							</div>
+
+							<div class="col-md-3">
+								<label for="city" class="form-label">City</label>
+								<input type="text" class="form-control" id="city" name="city" required>
+								<div class="invalid-feedback">
+									Please provide a valid city.
+								</div>
+							</div>
+							<div class="col-md-3">
+								<label for="provincestate" class="form-label">State or Province</label>
+
+								<input id="provincestate" name="provincestate" class="form-control">
+
+
+								<div class="valid-feedback">
+									State or Province Optional,
+								</div>
+							</div>
+
+
+							<div class="col-md-2">
+								<label for="postal" class="form-label">Postal</label>
+								<input type="text" class="form-control" id="postal" name="postal" required>
+								<div class="invalid-feedback">
+									Postal Code Required.
+								</div>
+							</div>
+
+
+							<div class="col-md-3">
+								<label for="country" class="form-label">Country</label>
+
+								<input id="country" name="country" class="form-control" required>
+
+								<div class="invalid-feedback">
+									Country is Required.
+								</div>
+							</div>
+
+
+
+							<div class="col-md-4">
+								<label for="website" class="form-label">Website</label>
+								<div class="input-group has-validation">
+									<input type="url" id="website" name="website" class="form-control"
+										aria-describedby="url" placeholder="www.example.com">
+
+									<div class="valid-feedback">
+										Website Optional!
+									</div>
+									<div class="invalid-feedback">
+										Invalid address: http://www.example.com
+									</div>
+								</div>
+							</div>
+
+
+
+
+							<div class="col-md-3">
+
+								<label for="services" class="form-label">Select a Service:</label>
+								<select class="form-select" id="services" name="services" required>
+									<option selected disabled value="">Choose...</option>
 									<option value="Website Design">Website Design</option>
 									<option value="Logo Design">Logo Design</option>
 									<option value="Digital Art Creation">Digital Art Creation</option>
@@ -108,62 +268,262 @@
 									<option value="Hosting Services">Hosting Services</option>
 									<option value="Website Maintenance">Website Maintenance</option>
 									<option value="Others Services">Others Services</option>
-								</datalist>
-								<br><br>
-							</td>
-						</tr>
-
-						<tr>
-							<td> <label for="client-select">Are you existing client? :</label></td>
-							<td>
-
-								<select type="client-select" id="client-select" name="client-select"
-									class="client-select">
-
-									<option value="Yes">Yes</option>
-									<option value="No">No</option>
 								</select>
-								<br><br>
-							</td>
-						</tr>
+								<div class="invalid-feedback">
+									Selection required.
+								</div>
+								<div class="valid-feedback">
+									Looks good!
+								</div>
 
-						<tr>
-							<td> <label for="Bestcontact">How you prefer us to contact?</label></td>
-							<td>
-								<input type="checkbox" id="checkboxEmail" name="Email" value="Email">
-								<label for="checkboxEmail">Email</label>
-								<input type="checkbox" id="checkboxPhone" name="phone" value="Phonet">
-								<label for="checkboxPhone">Phone</label>
+							</div>
 
 
 
-							</td>
+							<div class="col-md-12"></div>
 
-							<br><br>
-						</tr>
 
-						<tr>
-							<td><label for="details">Details:</label></td>
-							<td>
 
-								<textarea id="subject" name="subject" placeholder="Write something.."
-									style="height:200px"></textarea>
 
-								<br>
-								<br><br>
-							</td>
-						</tr>
+							<div class="col-md-12">
+								<label for="details" class="form-label">Details</label>
+								<div class="input-group has-validation">
+									<textarea class="form-control" id="details" name="details" rows="3"
+										required></textarea>
+									<div class="valid-feedback">
+										Looks Good!
+									</div>
+									<div class="invalid-feedback">
+										Details required.
+									</div>
+								</div>
+							</div>
 
-						<tr>
-							<th colspan="2"> <input type="reset" value="Reset" id="button" class="button"> <input
-									type="submit" id="button" class="button" value="Submit"> <br>
-								<br><br>
-							</th>
-						</tr>
 
-					</form>
 
-				</table>
+
+
+							<div class="col-md-3">
+								<label for="budget" class="form-label">Budget</label>
+								<div class="input-group has-validation">
+									<span class="input-group-text">$</span>
+									<input type="text" id="budget" name="budget" value="0" class="form-control"
+										aria-label="Amount (to the nearest dollar)">
+									<span class="input-group-text">.00</span>
+								</div>
+							</div>
+
+
+							<div class="col-md-2"></div>
+
+
+
+
+							<div class="col-md-6">
+								<label for="attachments" class="form-label">Attachments</label>
+								<div class="input-group has-validation">
+									<input class="form-control" type="file" id="attachments" name="attachments"
+										placeholder="Upload files" multiple>
+									<div class="valid-feedback">
+										Attachments Optional
+									</div>
+
+								</div>
+							</div>
+
+
+
+							<div class="col-md-12"></div>
+
+							<div class="col-md-2">
+								<label for="eclient" class="form-label"> </label>
+								<div class="form-check form-switch">
+									<label class="form-check-label" for="eclient">Existing Client?</label>
+									<input class="form-check-input" type="checkbox" id="eclient" name="eclient"
+										unchecked>
+
+								</div>
+
+
+
+							</div>
+
+
+
+							<div class="col-md-12"></div>
+
+							<div class="col-md-12"></div>
+
+
+							<div class="col-12">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+									<label class="form-check-label" for="invalidCheck">
+										Agree to terms and conditions
+									</label>
+
+									<div class="invalid-feedback">
+										You must agree before submitting.
+									</div>
+								</div>
+							</div>
+
+
+							<div class="col-md-12"></div>
+
+							<div class="col-md-12"></div>
+
+							<div class="col-6">
+								<button class="btn btn-primary" onclick="saveInfo1()">Save</button>
+								<button class="btn btn-primary" onclick="removeInfo()">Unsave</button>
+								<button class="btn btn-primary" onclick="retriveInfo1()">Retrive</button>
+								<button class="btn btn-primary" type="reset">Reset</button>
+								<button class="btn btn-primary" type="submit">Send</button>
+							</div>
+
+
+
+							<div class="col-md-6"></div>
+							<div class="col-md-12"></div>
+							<div class="col-md-12"></div>
+
+						</form>
+
+
+					</div>
+
+				</div>
+
+
+				<Script>(function () {
+						'use strict'
+
+						// Fetch all the forms we want to apply custom Bootstrap validation styles to
+						var forms = document.querySelectorAll('.needs-validation')
+
+						// Loop over them and prevent submission
+						Array.prototype.slice.call(forms)
+							.forEach(function (form) {
+								form.addEventListener('submit', function (event) {
+									if (!form.checkValidity()) {
+										event.preventDefault()
+										event.stopPropagation()
+									}
+
+									form.classList.add('was-validated')
+								}, false)
+							})
+					})()
+
+					document.addEventListener('DOMContentLoaded', e => {
+						$('#input-datalist').autocomplete()
+					}, false);
+
+				</Script>
+
+				<script>
+					$(function () {
+						var availableTags = [
+
+							"Afghanistan", "Åland Islands", "Albania", "Algeria", "American Samoa", "Andorra", "Angola", "Anguilla", "Antarctica", "Antigua and Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas (the)", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia (Plurinational State of)", "Bonaire, Sint Eustatius and Saba", "Bosnia and Herzegovina", "Botswana", "Bouvet Island", "Brazil", "British Indian Ocean Territory (the)", "Brunei Darussalam", "Bulgaria", "Burkina Faso", "Burundi", "Cabo Verde", "Cambodia", "Cameroon", "Canada", "Cayman Islands", "Central African Republic ", "Chad", "Chile", "China", "Christmas Island", "Cocos (Keeling) Islands", "Colombia", "Comoros (the)", "Congo (the Democratic Republic of the)", "Congo (the)", "Cook Islands (the)", "Costa Rica", "Croatia", "Cuba", "Curaçao", "Cyprus", "Czechia", "Côte d'Ivoire", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Eswatini", "Ethiopia", "Falkland Islands (the) [Malvinas]", "Faroe Islands", "Fiji", "Finland", "France", "French Guiana", "French Polynesia", "French Southern Territories (the)", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guadeloupe", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea-Bissau", "Guyana", "Haiti", "Heard Island and McDonald Islands", "Holy See", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "North Korea", "South Korea", "Kuwait", "Kyrgyzstan", "Lao People's Democratic Republic", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macao", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Martinique", "Mauritania", "Mauritius", "Mayotte", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauru", "Nepal", "Netherlands", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "Niue", "Norfolk Island", "Northern Mariana Islands", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Pitcairn", "Poland", "Portugal", "Puerto Rico", "Qatar", "Republic of North Macedonia", "Romania", "Russian Federation (the)", "Rwanda", "Réunion", "Saint Barthélemy", "Saint Helena, Ascension and Tristan da Cunha", "Saint Kitts and Nevis", "Saint Lucia", "Saint Martin (French part)", "Saint Pierre and Miquelon", "Saint Vincent and the Grenadines", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Sint Maarten (Dutch part)", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Georgia and the South Sandwich Islands", "South Sudan", "Spain", "Sri Lanka", "Sudan", "Suriname", "Svalbard and Jan Mayen", "Sweden", "Switzerland", "Syrian Arab Republic", "Taiwan (Province of China)", "Tajikistan", "Tanzania", "Thailand", "Timor-Leste", "Togo", "Tokelau", "Tonga", "Trinidad and Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks and Caicos Islands", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom of Great Britain and Northern Ireland", "United States Minor Outlying Islands", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Venezuela (Bolivarian Republic of)", "Viet Nam", "Virgin Islands (British)", "Virgin Islands (U.S.)", "Wallis and Futuna", "Western Sahara", "Yemen", "Zambia", "Zimbabwe"
+						];
+
+						$("#country").autocomplete({
+							source: availableTags
+						});
+					});
+				</script>
+
+
+				<script>
+					$(function () {
+						var availableTags = [
+
+							"Alberta", "British Columbia", "Manitoba", "New Brunswick", "Newfoundland and Labrador", "Northwest Territories", "Nova Scotia", "Nunavut", "Ontario", "Prince Edward Island", "Quebec", "Saskatchewan", "Yukon"
+						];
+
+						$("#provincestate").autocomplete({
+							source: availableTags
+						});
+					});
+				</script>
+
+
+				<script>
+					function saveInfo1() {
+						let fname = document.getElementById("firstname").value;
+						sessionStorage.setItem("firstname", fname);
+						let lname = document.getElementById("lastname").value;
+						sessionStorage.setItem("lastname", lname);
+						let company = document.getElementById("company").value;
+						sessionStorage.setItem("company", company);
+						let phone = document.getElementById("phone").value;
+						sessionStorage.setItem("phone", phone);
+						let fax = document.getElementById("fax").value;
+						sessionStorage.setItem("fax", fax);
+						let email = document.getElementById("email").value;
+						sessionStorage.setItem("email", email);
+						let preferred = document.getElementById("preferred").value;
+						sessionStorage.setItem("preferred", preferred);
+						let addess1 = document.getElementById("addess1").value;
+						sessionStorage.setItem("addess1", addess1);
+						let addess2 = document.getElementById("addess2").value;
+						sessionStorage.setItem("addess2", addess2);
+						let city = document.getElementById("city").value;
+						sessionStorage.setItem("city", city);
+						let provincestate = document.getElementById("provincestate").value;
+						sessionStorage.setItem("provincestate", provincestate);
+						let postal = document.getElementById("postal").value;
+						sessionStorage.setItem("postal", postal);
+						let website = document.getElementById("website").value;
+						sessionStorage.setItem("website", website);
+						let country = document.getElementById("country").value;
+						sessionStorage.setItem("country", country);
+						let services = document.getElementById("services").value;
+						sessionStorage.setItem("services", services);
+						let details = document.getElementById("details").value;
+						sessionStorage.setItem("details", details);
+						let budget = document.getElementById("budget").value;
+						sessionStorage.setItem("budget", budget);
+						let attachments = document.getElementById("attachments").value;
+						sessionStorage.setItem("attachments", attachments);
+						let eclient = document.getElementById("eclient").value;
+						sessionStorage.setItem("eclient", eclient);
+
+
+					}
+
+
+					function retriveInfo1() {
+						document.getElementById("firstname").value = sessionStorage.getItem("firstname");
+						document.getElementById("lastname").value = sessionStorage.getItem("lastname");
+						document.getElementById("company").value = sessionStorage.getItem("company");
+						document.getElementById("phone").value = sessionStorage.getItem("phone");
+						document.getElementById("fax").value = sessionStorage.getItem("fax");
+						document.getElementById("email").value = sessionStorage.getItem("email");
+						document.getElementById("preferred").value = sessionStorage.getItem("preferred");
+						document.getElementById("addess1").value = sessionStorage.getItem("addess1");
+						document.getElementById("addess2").value = sessionStorage.getItem("addess2");
+						document.getElementById("city").value = sessionStorage.getItem("city");
+						document.getElementById("provincestate").value = sessionStorage.getItem("provincestate");
+						document.getElementById("postal").value = sessionStorage.getItem("postal");
+						document.getElementById("website").value = sessionStorage.getItem("website");
+						document.getElementById("country").value = sessionStorage.getItem("country");
+						document.getElementById("services").value = sessionStorage.getItem("services");
+						document.getElementById("details").value = sessionStorage.getItem("details");
+						document.getElementById("budget").value = sessionStorage.getItem("budget");
+						document.getElementById("attachments").value = sessionStorage.getItem("attachments");
+						document.getElementById("eclient").value = sessionStorage.getItem("eclient");
+
+					}
+
+					function removeInfo() {
+						sessionStorage.clear();
+
+					}
+				</script>
+
+
 			</div>
 
 
